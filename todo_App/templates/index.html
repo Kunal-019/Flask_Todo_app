@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <form id="task-form">
+        <input type="text" id="task-title" placeholder="New task" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <ul id="task-list">
+        <li>
+            <strong>Task Name</strong>
+            <strong>Task Status</strong>
+            <strong>Edit</strong>
+            <strong>Delete</strong>
+            <strong>change_status</strong>
+        </li>
+        {% for task in tasks %}
+            <li data-id="{{ task.id }}">
+                <span>{{ task.title }}</span>
+                <span>{{ task.status }}</span>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+                <button class="status-btn" data-status="completed">Change Status</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

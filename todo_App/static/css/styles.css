@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#task-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#task-form input {
+    flex: 1;
+    padding: 10px;
+}
+
+#task-form button {
+    padding: 10px;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.status-btn {
+    margin-left: 10px;
+}
